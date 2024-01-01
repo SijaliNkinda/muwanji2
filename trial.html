@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muwanji Online</title>
+  <link rel="stylesheet" href="stylesheet/header.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      overflow: hidden; /* Hide horizontal scrollbar */
+    }
+
+    
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #555;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Added style for the moving text */
+    #movingText {
+      position: relative;
+      white-space: nowrap; /* Prevent text from breaking into multiple lines */
+      width: 90%; /* Increase the initial width */
+      overflow: clip; /* Hide overflow text */
+      font-size: 30px; /* Set font size for better visibility */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="movingText">Muwanji Online <p>Tazama hapa matokeo ya kidato cha nne 2023-2024</p> <p>Michezo - kombe la mapinduzi zanzibar</p> </h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="">play games</a>
+  </nav>
+
+  <section>
+    <h2>Welcome to Muwanji Online!</h2>
+    <p>This is a simple website. Explore the content and click the button below.</p>
+    <button onclick="changeContent()">Click me</button>
+    <p id="dynamicContent">This content will change dynamically.</p>
+  </section>
+
+  <script  src="java-script/header.js">
+  
+  </script>
+
+</body>
+</html>
