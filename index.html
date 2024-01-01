@@ -4,20 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Muwanji Online</title>
+  <link rel="stylesheet" href="stylesheet/header.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
+      overflow: hidden; /* Hide horizontal scrollbar */
     }
 
-    header {
-      background-color: #4a0505;
-      padding: 10px;
-      text-align: center;
-      color: #fff;
-    }
+    
 
     nav {
       display: flex;
@@ -44,12 +41,21 @@
       border: none;
       cursor: pointer;
     }
+
+    /* Added style for the moving text */
+    #movingText {
+      position: relative;
+      white-space: nowrap; /* Prevent text from breaking into multiple lines */
+      width: 90%; /* Increase the initial width */
+      overflow: clip; /* Hide overflow text */
+      font-size: 30px; /* Set font size for better visibility */
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Muwanji Online</h1>
+    <h1 id="movingText">Muwanji Online <p>Tazama hapa matokeo ya kidato cha nne 2023-2024</p> <p>Michezo - kombe la mapinduzi zanzibar</p> </h1>
   </header>
 
   <nav>
@@ -57,6 +63,7 @@
     <a href="#">About</a>
     <a href="#">Services</a>
     <a href="#">Contact</a>
+    <a href="">play games</a>
   </nav>
 
   <section>
@@ -66,10 +73,8 @@
     <p id="dynamicContent">This content will change dynamically.</p>
   </section>
 
-  <script>
-    function changeContent() {
-      document.getElementById("dynamicContent").innerHTML = "Content changed!";
-    }
+  <script  src="java-script/header.js">
+  
   </script>
 
 </body>
