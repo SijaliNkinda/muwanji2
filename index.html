@@ -12,6 +12,9 @@
       padding: 0;
       background-color: #f4f4f4;
       overflow: hidden; /* Hide horizontal scrollbar */
+      height: 2000px;
+      overflow: auto;
+
     }
 
     
@@ -24,23 +27,17 @@
     }
 
     nav a {
-      color: #fff;
+      color: hwb(0 91% 6%);
       text-decoration: none;
       padding: 10px;
       margin: 0 10px;
     }
 
     section {
-      padding: 20px;
+      padding: 30px;
     }
 
-    button {
-      padding: 10px;
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
+    
 
     /* Added style for the moving text */
     #movingText {
@@ -49,13 +46,14 @@
       width: 90%; /* Increase the initial width */
       overflow: clip; /* Hide overflow text */
       font-size: 30px; /* Set font size for better visibility */
+
     }
   </style>
 </head>
-<body>
+<body class="content">
 
   <header>
-    <h1 id="movingText">Muwanji Online <p>Tazama hapa matokeo ya kidato cha nne 2023-2024</p> <p>Michezo - kombe la mapinduzi zanzibar</p> </h1>
+    <h1 id="movingText">Muwanji Online  </h1>
   </header>
 
   <nav>
@@ -68,9 +66,14 @@
 
   <section>
     <h2>Welcome to Muwanji Online!</h2>
-    <p>This is official muwanji website, simple website and interesting news. Explore the content and click the button below.</p>
-    <button onclick="changeContent()">Click me</button>
-    <p id="dynamicContent">This content will change dynamically.</p>
+    <h3> <a href="https://matokeo.necta.go.tz/results/2023/psle/index.htm">Tazama matokeo ya darasa la nne 2023-2024</a> </h3>
+    <h3> <a href="https://matokeo.necta.go.tz/results/2023/psle/index.htm">Tazama matokeo ya darasa la saba 2023-2024</a></h3>
+    <h3> <a href="https://matokeo.necta.go.tz/results/2023/ftna/ftna.htm">Tazama matokeo ya FORM TWO 2023-2024</a></h3>
+    <h3><a href="https://onlinesys.necta.go.tz/results/2022/csee/index.htm">Tazama matokeo ya FORM FOUR 2023-2024</a></h3>
+    <h3><a href="https://matokeo.necta.go.tz/results/2023/acsee/index.htm">Tazama matokeo ya FORM SIX  2023-2024</a></h3>
+    <h3><a href="https://matokeo.necta.go.tz/results/2023/selection/psle_selection.htm">WANAFUNZI WALIOCHAGULIWA KIDATO CHA KWANZA 2024</a></h3>
+
+  
   </section>
 
   <script  src="java-script/header.js">
