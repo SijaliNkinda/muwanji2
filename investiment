@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        select, input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .error {
+            color: red;
+            font-size: 0.875em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+               
+                <option value="+27">South Africa (+27)</option>
+                <option value="+255">Tanzania (+255)</option>
+                <option value="+257">Burundi (+257)</option>
+                <option value="+250">Rwanda (+250)</option>
+                <option value="+254">Kenya (+254)</option>
+                <option value="+233">Ghana (+233)</option>
+                <option value="+256">Uganda (+256)</option>
+                <option value="+260">Zambia (+260)</option>
+                <option value="+221">Senegal (+221)</option>
+                <option value="+234">Nigeria (+234)</option>
+                <option value="+225">Ivory Coast (+225)</option>
+                <option value="+212">Morocco (+212)</option>
+                <option value="+213">Algeria (+213)</option>
+                <option value="+218">Libya (+218)</option>
+                <option value="+20">Egypt (+20)</option>
+                <option value="+235">Chad (+235)</option>
+                <option value="+237">Cameroon (+237)</option>
+                <option value="+229">Benin (+229)</option>
+                <option value="+241">Gabon (+241)</option>
+                <option value="+242">Congo (+242)</option>
+                <option value="+243">Democratic Republic of the Congo (+243)</option>
+                <option value="+250">Rwanda (+250)</option>
+                <option value="+263">Zimbabwe (+263)</option>
+                <option value="+268">Eswatini (+268)</option>
+                <option value="+269">Comoros (+269)</option>
+                <option value="+252">Somalia (+252)</option>
+                <option value="+220">Gambia (+220)</option>
+                <option value="+255">Tanzania (+255)</option>
+                <!-- Add more countries and their dialing codes here if needed -->
+            </select>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter phone number" required autofocus>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirmPassword">Repeat Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <input type="submit" value="Register">
+            <p id="error" class="error"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var country = document.getElementById('country').value;
+            var phone = document.getElementById('phone').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var errorElement = document.getElementById('error');
+
+            errorElement.textContent = ''; // Clear previous errors
+
+            // Validate all fields
+            if (!country) {
+                errorElement.textContent = 'Please select your country.';
+                return;
+            }
+
+            if (!phone || !/^\d+$/.test(phone)) {
+                errorElement.textContent = 'Please enter a valid phone number.';
+                return;
+            }
+
+            if (password.length < 6) {
+                errorElement.textContent = 'Password must be at least 6 characters long.';
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                errorElement.textContent = 'Passwords do not match.';
+                return;
+            }
+
+            // Form is valid, you can proceed with further actions, e.g., sending data to the server
+            console.log('Form submitted with:', {
+                country: country,
+                phone: phone,
+                password: password
+            });
+            // You might want to send the data to a server here
+        });
+    </script>
+</body>
+</html>
+ 
